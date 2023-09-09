@@ -21,7 +21,7 @@ public class WordManager {
                 + "0. 나가기\n"
                 + "********************\n"
                 + "=> 원하는 메뉴는? ");
-        return s.nextInt();
+        return s.nextInt(); //여기서 바로 사용자에게 메뉴 번호를 입력받음
     }
 
     public void start() {
@@ -33,6 +33,12 @@ public class WordManager {
             }
             else if (menu == 1) {
                 wordCRUD.listAll();
+            }
+            else if (menu == 5){ //update
+                wordCRUD.updateItem();
+            }
+            else if (menu == 6){ //delete
+
             }
         }
     }
