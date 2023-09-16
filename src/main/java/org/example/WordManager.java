@@ -4,7 +4,7 @@ public class WordManager {
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
 
-    WordManager(){
+    WordManager(){ //생성자
         wordCRUD = new WordCRUD(s);
     }
 
@@ -25,6 +25,8 @@ public class WordManager {
     }
 
     public void start() {
+
+        wordCRUD.loadFile();
         while(true) {
             int menu = selectMenu();
             if (menu == 0) break;
